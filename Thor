@@ -1,12 +1,30 @@
-   string distX; string distY
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int lightX; // the X position of the light of power
+    int lightY; // the Y position of the light of power
+    int initialTX; // Thor's starting X position
+    int initialTY; // Thor's starting Y position
+    cin >> lightX >> lightY >> initialTX >> initialTY; cin.ignore();
+    
+    string distX; string distY;
    
     // game loop
     while (1) {
+        distX = ""; distY= "";
         int remainingTurns; // The remaining amount of turns Thor can move. Do not remove this line.
         cin >> remainingTurns; cin.ignore();
-          if      (initialTX < lightX) { distX = "E" ; initialTX +=1 }
-          else if (initialTX > lightX) { distX = "W" ; initialTX -=1 }
-          else if (initialTY < lightY) { distY = "N" ; initialTY +=1 }
-          else if (initialTY > lightY) { distY = "S" ; initialTY -=1 }
+          if      (initialTX < lightX) { distX = "E" ; initialTX +=1; }
+          else if (initialTX > lightX) { distX = "W" ; initialTX -=1; }
+          if      (initialTY > lightY) { distY = "N" ; initialTY -=1; }
+          else if (initialTY < lightY) { distY = "S" ; initialTY +=1; }
     
-          cout << distX + distY << endl;
+          cout << distY + distX << endl;
+    }
+}
