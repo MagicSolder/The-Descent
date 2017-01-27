@@ -7,23 +7,25 @@ using namespace std;
 
 int main()
 {
-    int tm = 0 ;// temperature
-    int mn = -1000 ; // Min temp.
     int n; // the number of temperatures to analyse
     cin >> n; cin.ignore();
     string temps; // the n temperatures expressed as integers ranging from -273 to 5526
     getline(cin, temps);
      
-     if ( n == 0) {
-        cout <<"Not temperatures" << endl; 
-         } else {
-         for (int temp;) {
-            if ( 0 - temps > mn ) {
-              tm = temps;
-              mn = 0 - tm; }
-            else if ( 0 - temps == mn) {
-              tm = mn ; }
-          }
-        }
-            cout << tm << endl;
+    int tm = 0 ;// temperature
+    int mn = 5527 ; // max temp.
+     
+      for (int i = 0 ;i <= n; i ++ ) {
+        if ( n == 0 ) {
+            cout << "Not" << endl; }
+            else {
+             if ( abs(i) < mn ) { 
+                 tm = i;
+                 mn = abs(i);}
+             else  {
+             tm = i; }
+            }
+    }
+                 
+    cout << tm << endl;
 }
