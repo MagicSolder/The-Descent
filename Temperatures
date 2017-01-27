@@ -29,3 +29,5 @@ int main()
                  
     cout << tm << endl;
 }
+
+//int Temp=temps.size(); if (0 - abs(i) == mn )
