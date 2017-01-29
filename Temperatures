@@ -13,18 +13,19 @@ int main()
     getline(cin, temps);
      
     int tm = 0 ;// temperature
-    int mn = 5527 ; // max temp.
-    int Temp=temps.size()
+    int mn = -5527 ; // max temp.
+     int Temp=temps.size();
      
       for (int i = 0 ;i <= Temp; i ++ ) {
         if ( n == 0 ) {
-            cout << "Not" << endl; }
+            tm = 0;
+            cout << tm << endl; }
             else {
-             if ( abs(i) < mn ) { 
-                 tm = i;
-                 mn = abs(i);}
+             if ( abs(Temp) > mn ) { 
+                 tm = Temp;
+                 mn = abs(Temp);}
              else  {
-             tm = i; }
+             tm = tm; }
             }
     }
                  
