@@ -14,8 +14,9 @@ int main()
      
     int tm = 0 ;// temperature
     int mn = 5527 ; // max temp.
+    int Temp=temps.size()
      
-      for (int i = 0 ;i <= n; i ++ ) {
+      for (int i = 0 ;i <= Temp; i ++ ) {
         if ( n == 0 ) {
             cout << "Not" << endl; }
             else {
